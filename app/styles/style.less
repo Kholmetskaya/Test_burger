@@ -184,6 +184,7 @@ p{
     margin: 0 auto;
 }
 
+
 body {
     header {
         background: url(../img/background_header.png) no-repeat;
@@ -280,118 +281,130 @@ body {
     }
     .slider{
         background: url(../img/bg_sect3.png) no-repeat;
-        .slider-info{
+        .slick-slider{
             display: flex;
-            justify-content: flex-end;
-            height: 445px;
-            position: relative;
-            .slider-composition{
-                position: absolute;
-                top:0;
-                left:0;
-                z-index: 10;
-                .slider-composition-menu{
-                    display: flex;                   
-                    .slider-composition-burger{
-                        width: 90px;
-                        height: 90px;                   
-                        border-radius: 5px;                   
-                        background-color: #ea7a32;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column; 
-                        .slider-composition-burger-info{
-                            .text(14px,normal,center,#ffffff,'Gagalin',normal,none)  ;
-                            padding-top: 10px;
+
+            .slider-info{
+                display: flex;
+                justify-content: flex-end;
+                height: 480px;
+                position: relative;             
+                .slider-composition{
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    z-index: 10;
+                    height: 450px;
+                    .slider-composition-menu{
+                        display: flex;                   
+                        .slider-composition-burger{
+                            width: 90px;
+                            height: 90px;                   
+                            border-radius: 5px;                   
+                            background-color: #ea7a32;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column; 
+                            .slider-composition-burger-info{
+                                .text(14px,normal,center,#ffffff,'Gagalin',normal,none)  ;
+                                padding-top: 10px;
+                            }
                         }
-                    }
-                    .slider-composition-info{
-                        width: 272px;
-                        height: 402px;
-                        border-radius: 5px;
-                        background-color: #ffffff;
-                        opacity: 0.91;
-                        display: flex;
-                        justify-content: flex-end;
-                        align-items: center;
-                        .slider-composition-info-list{
-                            width: 90%;
-                            margin-top: 20px;
-                            .slider-composition-info-list-item{
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                margin-bottom: 23px;
-                                .slider-composition-info-list-item-info{
-                                    width: 25%;
-                                    .text(16px,normal,left,#5a5a5a,'Ubuntu',normal,none)  ;
-                                    line-height: 26px;
-                                    &:nth-child(2){
-                                        width: 45%;
-                                    }
-                                    .slider-composition-info-list-item-info-img{
-                                        vertical-align: middle;
+                        .slider-composition-info{
+                            width: 272px;
+                            height: 0;
+                            overflow: hidden;
+                            transition: all 1s;
+                            border-radius: 5px;
+                            background-color: #ffffff;
+                            opacity: 0;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            .slider-composition-info-list{
+                                width: 90%;
+                                margin-top: 20px;
+                                .slider-composition-info-list-item{
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    margin-bottom: 23px;
+                                    .slider-composition-info-list-item-info{
+                                        width: 25%;
+                                        .text(16px,normal,left,#5a5a5a,'Ubuntu',normal,none)  ;
+                                        line-height: 26px;
+                                        &:nth-child(2){
+                                            width: 45%;
+                                        }
+                                        .slider-composition-info-list-item-info-img{
+                                            vertical-align: middle;
+                                        }
                                     }
                                 }
+    
                             }
-
+                        }
+                        .active{
+                            opacity: 0.91;
+                            height: 402px;
                         }
                     }
-                }
-                .slider-composition-weight{
-                    position: relative;
-                    top: -10px;
-                    .text(14px,normal,left,#ffffff,'Gagalin',normal,none)  ;
-                    opacity: 0.5;
-                    line-height: 26px;
-                    .slider-composition-weight-count{
-                        width: 57px;
-                        text-align: center;
+                    .slider-composition-weight{
                         position: absolute;
-                        top: 27px;
-                        span{
-                            display: block;
+                        bottom: 0;
+                        .text(14px,normal,left,#ffffff,'Gagalin',normal,none)  ;
+                        opacity: 0.5;
+                        line-height: 26px;
+                        .slider-composition-weight-count{
+                            width: 57px;
+                            text-align: center;
+                            position: absolute;
+                            top: 27px;
+                            span{
+                                display: block;
+                            }
                         }
                     }
                 }
-            }
-            .slider-img{
-                width: 50%;
-                display: flex;
-                align-items: center;
-                .slider-img-burger{
-                    width: 100%;
-                    height: auto;
-                }
-            }
-            .slider-content{
-                width: 50%;
-                .slider-content-header{
-                    color: #ffffff;
-                }
-                .slider-content-info{
-                    color: #ffffff;
-                    line-height: 26px;
-                    margin: 38px 0;
-                }
-                .slider-content-value{
+                .slider-img{
+                    width: 47%;
                     display: flex;
-                    align-items: flex-end;
-                    .slider-content-value-count{
-                        .text(72px,normal,left,#e35028,'Gagalin',normal,none)  ;  
-                        margin-right: 10px;              
+                    align-items: center;
+                    .slider-img-burger{
+                        width: 100%;
+                        height: auto;
                     }
-                    .slider-content-value-currency{
-                        .text(30px,normal,left,#e35028,'Gagalin',normal,none)  ;  
-                        margin-right: 30px; 
-                    }
-                    .content-button{
-                        background-color: #e45028;
+                }
+                .slider-content{
+                    width: 53%;
+                    .slider-content-header{
                         color: #ffffff;
+                    }
+                    .slider-content-info{
+                        color: #ffffff;
+                        line-height: 26px;
+                        margin: 38px 0;
+                    }
+                    .slider-content-value{
+                        display: flex;
+                        align-items: flex-end;
+                        .slider-content-value-count{
+                            .text(72px,normal,left,#e35028,'Gagalin',normal,none)  ;  
+                            margin-right: 10px;              
+                        }
+                        .slider-content-value-currency{
+                            .text(30px,normal,left,#e35028,'Gagalin',normal,none)  ;  
+                            margin-right: 30px; 
+                        }
+                        .content-button{
+                            background-color: #e45028;
+                            color: #ffffff;
+                        }
                     }
                 }
             }
         }
+
     }
 } 
