@@ -126,6 +126,12 @@ q:after {
     font-style: normal;
 }
 @font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/3969.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
     font-family: 'Gagalin';
     src: url('../fonts/9903.otf') format('truetype');
     font-style: normal;
@@ -135,6 +141,7 @@ q:after {
     src: url('../fonts/DearType - Lifehack.otf') format('truetype');
     font-style: normal;
 }
+
 
 @contentColor:#e59d32;;
 
@@ -151,7 +158,7 @@ q:after {
     width: 100px;
     height: 38px;
     border-radius: 5px;
-    background-color: @contentColor;
+    background-color: #e45028;
     border:none;
     color:#ffffff;
     cursor: pointer;
@@ -171,6 +178,7 @@ h4{
 p{
     .text(14px,normal,left,#2f3234,'Ubuntu',normal,none)  ;
 }
+
 .bg_section{
     background-size:  cover;
     width: 100%;
@@ -187,7 +195,7 @@ p{
 
 body {
     header {
-        background: url(../img/background_header.png) no-repeat;
+        background: url(../img/background_header.png) no-repeat center top 100%;
         flex-direction: column; 
         .header{
             display: flex;
@@ -253,7 +261,7 @@ body {
         }     
     }
     .info{
-        background: url(../img/bg_section2.png) no-repeat;
+        background: url(../img/bg_section2.png) no-repeat center top 100%;
         flex-direction: column; 
         .info-content{
             display: flex;
@@ -283,7 +291,6 @@ body {
         background: url(../img/bg_sect3.png) no-repeat;
         .slick-slider{
             display: flex;
-
             .slider-info{
                 display: flex;
                 justify-content: flex-end;
@@ -361,7 +368,7 @@ body {
                             text-align: center;
                             position: absolute;
                             top: 27px;
-                            span{
+                            .slider-composition-weight-count-text{
                                 display: block;
                             }
                         }
@@ -407,4 +414,145 @@ body {
         }
 
     }
+    .team{
+        background: url(../img/bg_sect4.png) no-repeat center top 100%;
+        justify-content: flex-end;
+        .team-content{
+            width: 44%;
+            height: 100%;
+            background-color: #242424;
+            opacity: 0.9;
+            display: flex;
+            flex-direction: column;
+            padding-left: 126px;
+            .team-content-header{
+                padding: 126px 0 110px 18px;
+            }
+            .team-content-list{
+                .team-content-list-item{
+                    margin-bottom: 44px;
+                    .team-content-list-item-person{
+                        .text(14px,normal,left,#ffffff,'Gagalin',normal,none)  ;
+                        display: flex;
+                        align-items: center;
+                        .team-content-list-item-person-img{
+                            margin-right: 8px;
+                            transform: rotate(180deg);
+                        }
+                    }
+                    .team-content-list-item-info{
+                        display: flex;
+                        justify-content: space-around;
+                        margin-top: 17px;
+                        height: 0;
+                        opacity: 0;
+                        transition: all 1s;
+                        .team-content-list-item-info-img{
+                            width: 132px;
+                            height: 100px;
+                        }
+                        .team-content-list-item-info-content{
+                            .team-content-list-item-info-content-header{
+                                .text(14px,normal,left,#ffffff,'Ubuntu',bold,none)  ; 
+                                margin-bottom: 20px;
+                            }
+                            .team-content-list-item-info-content-parag{
+                                .text(14px,normal,left,#ffffff,'Ubuntu',normal,none)  ;                               
+                            }
+                        }
+                    }
+                }
+                .active{                  
+                    .team-content-list-item-person{                      
+                        color: #f9b43b;                      
+                        .team-content-list-item-person-img{
+                            transform: rotate(0);
+                        }
+                    }
+                    .team-content-list-item-info{
+                        height: 116px;
+                        opacity: 1; 
+                    }
+                }
+            }
+        } 
+    }
+    .menu{
+        background: url(../img/bg_sect5.png) no-repeat center top 100%; 
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        .menu-header{
+            .text(72px,normal,left,#ffffff,'Gagalin',normal,none); 
+           position: relative;
+           top: 15%;
+           left: 10%;
+        }
+        .menu-content{
+            width: 40%;
+            height: 100%;
+           .menu-content-list{
+               display: flex;
+               height: 100%;
+               .menu-content-list-item{
+                display: flex;
+                .menu-content-list-item-header{
+                    height: 100%;
+                    background: url(../img/foto1_sect5.png) no-repeat center top 100%; 
+                    transform: rotate(180deg);
+                    writing-mode: vertical-rl;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .menu-content-list-item-header-text{                       
+                        .text(40px,normal,left,#ffffff,'Gagalin',normal,none)  ;
+                        padding: 20px;
+                    }
+                }
+                &:nth-child(2){
+                    .menu-content-list-item-header{
+                        background: url(../img/foto2_sect5.png) no-repeat center top 100%; 
+                    }
+                   
+                }
+                &:nth-child(3){
+                    .menu-content-list-item-header{
+                        background: url(../img/foto3_sect5.png) no-repeat center top 100%; 
+                    }
+                }
+                .menu-content-list-item-info{
+                    background-color: #333333;
+                    opacity: 0;
+                    transition: all 0.5s;
+                    width: 0;
+                    overflow: hidden;
+                    cursor: pointer;
+                    .menu-content-list-item-info-text{
+                        .text(14px,normal,left,#ffffff,'Ubuntu',normal,none)  ;
+                        line-height: 24px;
+                        margin: 67px auto;
+                        width: 90%;
+                    }
+                }
+               }
+               .selected{
+                   .menu-content-list-item-header{
+                       .menu-content-list-item-header-text{
+                        color: #f9b43b;
+                       }                     
+                   }
+                   .menu-content-list-item-info{
+                        opacity: 0.9;
+                        width: auto;
+                   }
+               }
+           }
+        }
+    }
+    .form{
+        background: url(../img/bg_sect7.png) no-repeat center top 100%; 
+        flex-direction: column;
+    }
+
+
 } 
