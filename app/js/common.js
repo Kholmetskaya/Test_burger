@@ -34,12 +34,27 @@ document.addEventListener("DOMContentLoaded", function(){
           if (active.length > 0 && active[0] !== currentItem) {
           active[0].classList.remove('active'); 
         }
-        currentItem.classList.add('active');
-       
+        currentItem.classList.add('active');      
       });
     });
   });
+// Portfolio section 4
 
+// document.addEventListener("DOMContentLoaded", function(){
+//   var foto = document.querySelectorAll(".reviews-content-person");
+//   var cross = document.querySelectorAll(".reviews-content-person-info-name-img");
+//   var modal = document.querySelector(".reviews-content-person-info")
+//   var bg = document.querySelector('.reviews-bg');
+
+//   [].forEach.call(foto, cross, function(item) {
+//     item.addEventListener('click', function(e) {
+//       event.preventDefault();  
+//       console.log(e.target)
+//       // modal.classList.toggle('active-foto');      
+//     });  
+    
+//   });
+// });
 
 // Menu-list section 5
 
@@ -56,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function(){
         selectedItem.classList.add('selected');      
       });
     });
-  });
+});
+
 
 
