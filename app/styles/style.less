@@ -200,6 +200,37 @@ textarea{
     align-items: center; 
     justify-content: center;
 }
+.dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    z-index: 100;
+    .dots-circle{
+        border-radius: 50%;
+        background-color: #ffffff;
+        width: 6px;
+        height: 6px; 
+        margin-bottom: 12px;
+        position: relative;
+    }
+    .active-dot:after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: calc(~"-50% - 2px");
+        left: calc(~"-50% - 2px");
+        border-radius: 50%;
+        border-width: 1px;
+        border-color: #ffffff;
+        border-style: solid;
+        width: 14px;
+        height: 14px;
+    }
+}
 .wrapper {
     width: 940px;
     margin: 0 auto;
@@ -209,7 +240,8 @@ textarea{
 body {
     header {
         background: url(../img/background_header.png) no-repeat center top 100%;
-        flex-direction: column; 
+        flex-direction: column;
+        position: relative; 
         .header{
             display: flex;
             justify-content: space-between;
@@ -276,6 +308,7 @@ body {
     .info{
         background: url(../img/bg_section2.png) no-repeat center top 100%;
         flex-direction: column; 
+        position: relative;
         .info-content{
             display: flex;
             align-items: flex-end; 
@@ -302,6 +335,7 @@ body {
     }
     .slider{
         background: url(../img/bg_sect3.png) no-repeat;
+        position: relative;
         .slick-slider{
             display: flex;
             .slider-info{
@@ -430,6 +464,7 @@ body {
     .team{
         background: url(../img/bg_sect4.png) no-repeat center top 100%;
         justify-content: flex-end;
+        position: relative;
         .team-content{
             width: 44%;
             height: 100%;
@@ -495,6 +530,7 @@ body {
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
+        position: relative;
         .menu-header{
             .text(72px,normal,left,#ffffff,'Gagalin',normal,none); 
            position: relative;
@@ -619,7 +655,6 @@ body {
                                 color: #444444;
                             }
                         }
-
                     }
                     &:target{
                         display: block;
@@ -632,6 +667,7 @@ body {
     .form{
         background: url(../img/bg_sect7.png) no-repeat center top 100%; 
         flex-direction: column;
+        position: relative;
         .form-content{
             display: flex;
             justify-content: space-around;
@@ -700,6 +736,33 @@ body {
             }
         }
     }
-
+    #map{
+        background: url(../img/bg_sect8.png) no-repeat center top 100%;
+        position: relative; 
+        // width:100%;
+        // height: 1000px;
+    }
+    footer{
+        height: 63px;
+        background-color: #131313;
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            .footer-text, {
+                .text(14px,normal,left,#ffffff,'Ubuntu',normal,none)  ; 
+                line-height: 25px;
+            }
+            .footer-tel{
+                .text(14px,normal,left,#e45028,'Ubuntu',bold,none)  ; 
+            }
+            .footer-social-link{
+                color: #585858;
+                font-size: 23px;
+                margin-right: 12px;
+            }
+        }
+    }
 
 } 

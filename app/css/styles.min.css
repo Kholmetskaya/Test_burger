@@ -320,6 +320,54 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.dots {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  z-index: 100;
+}
+.dots .dots-circle {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #ffffff;
+  width: 6px;
+  height: 6px;
+  margin-bottom: 12px;
+  position: relative;
+}
+.dots .active-dot:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -webkit-calc(-50% - 2px);
+  top: calc(-50% - 2px);
+  left: -webkit-calc(-50% - 2px);
+  left: calc(-50% - 2px);
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border-width: 1px;
+  border-color: #ffffff;
+  border-style: solid;
+  width: 14px;
+  height: 14px;
+}
 .wrapper {
   width: 940px;
   margin: 0 auto;
@@ -331,6 +379,7 @@ body header {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 body header .header {
   display: -webkit-box;
@@ -434,6 +483,7 @@ body .info {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 body .info .info-content {
   display: -webkit-box;
@@ -482,6 +532,7 @@ body .info .info-content .info-content-item .info-content-item-text {
 }
 body .slider {
   background: url(../img/bg_sect3.png) no-repeat;
+  position: relative;
 }
 body .slider .slick-slider {
   display: -webkit-box;
@@ -700,6 +751,7 @@ body .team {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  position: relative;
 }
 body .team .team-content {
   width: 44%;
@@ -807,6 +859,7 @@ body .menu {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 100%;
+  position: relative;
 }
 body .menu .menu-header {
   font-size: 72px;
@@ -997,6 +1050,7 @@ body .form {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 body .form .form-content {
   display: -webkit-box;
@@ -1106,4 +1160,51 @@ body .form .form-content .form-content-partright .form-content-partright-item:nt
 body .form .form-content .form-content-partright .form-content-partright-item:nth-child(3) .form-content-partright-item-sect,
 body .form .form-content .form-content-partright .form-content-partright-item:nth-child(4) .form-content-partright-item-sect {
   width: 100%;
+}
+body #map {
+  background: url(../img/bg_sect8.png) no-repeat center top 100%;
+  position: relative;
+}
+body footer {
+  height: 63px;
+  background-color: #131313;
+}
+body footer .wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+body footer .wrapper .footer-text {
+  font-size: 14px;
+  font-style: normal;
+  text-align: left;
+  color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: normal;
+  text-transform: none;
+  line-height: 25px;
+}
+body footer .wrapper .footer-tel {
+  font-size: 14px;
+  font-style: normal;
+  text-align: left;
+  color: #e45028;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  text-transform: none;
+}
+body footer .wrapper .footer-social-link {
+  color: #585858;
+  font-size: 23px;
+  margin-right: 12px;
 }

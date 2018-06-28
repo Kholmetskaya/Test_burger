@@ -38,23 +38,6 @@ document.addEventListener("DOMContentLoaded", function(){
       });
     });
   });
-// Portfolio section 4
-
-// document.addEventListener("DOMContentLoaded", function(){
-//   var foto = document.querySelectorAll(".reviews-content-person");
-//   var cross = document.querySelectorAll(".reviews-content-person-info-name-img");
-//   var modal = document.querySelector(".reviews-content-person-info")
-//   var bg = document.querySelector('.reviews-bg');
-
-//   [].forEach.call(foto, cross, function(item) {
-//     item.addEventListener('click', function(e) {
-//       event.preventDefault();  
-//       console.log(e.target)
-//       // modal.classList.toggle('active-foto');      
-//     });  
-    
-//   });
-// });
 
 // Menu-list section 5
 
@@ -73,5 +56,41 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 });
 
+// Map
 
 
+// var map;
+// function initMap() {
+
+//   map = new google.maps.Map(document.getElementById('map'), {
+//     center: { lat: 59.901126, lng: 30.294996 },
+//     zoom: 10,
+//     styles: [{ featureType: "poi", elementType: "labels", stylers: [{ visibility: "off" }] }]
+//   });
+
+//   var locations = [
+//     {
+//       lat: 59.913711,
+//       lng: 30.511732
+//     },
+//     {
+//       lat: 59.979842,
+//       lng: 30.352959
+//     },
+//     {
+//       lat: 59.873044,
+//       lng: 30.328798
+//     },
+//     {
+//       lat: 59.959045,
+//       lng: 30.306270
+//     }
+//   ];
+
+//   for (i = 0; i < locations.length; i++) {
+//     var marker = new google.maps.Marker({
+//       position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+//       map: map,
+//     });
+//   }
+// }
