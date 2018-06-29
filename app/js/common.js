@@ -1,8 +1,11 @@
-// Slider
+// // Slider
 
 $(function(){
-    $('.slick-slider').slick();
-})
+    $('.slick-slider').slick({
+      prevArrow: '<button class="slick-prev"><img src="../img/arrow_left.png" alt="#" /></button>',
+      nextArrow: '<button class="slick-next"><img src="../img/arrow_right.png" alt="#" /></button>',
+    });
+});
 
 
 //Burger-menu
@@ -94,3 +97,48 @@ document.addEventListener("DOMContentLoaded", function(){
 //     });
 //   }
 // }
+
+// Dots
+
+jQuery(document).ready(function ($) {
+  redrawDotNav();
+  $(window).bind('scroll', function (e) { redrawDotNav(); });
+  $('.dots-circle_1').click(function () { $('html, body').animate({ scrollTop: 0 }, 1000); return false; });
+  $('.dots-circle_2').click(function () { $('html, body').animate({ scrollTop: $('#dots2').offset().top }, 1000); return false; });
+  $('.dots-circle_3').click(function () { $('html, body').animate({ scrollTop: $('#dots3').offset().top }, 1000); return false; });
+  $('.dots-circle_4').click(function () { $('html, body').animate({ scrollTop: $('#dots4').offset().top }, 1000); return false; });
+  $('.dots-circle_5').click(function () { $('html, body').animate({ scrollTop: $('#dots5').offset().top }, 1000); return false; });
+  $('.dots-circle_6').click(function () { $('html, body').animate({ scrollTop: $('#dots6').offset().top }, 1000); return false; });
+  $('.dots-circle_7').click(function () { $('html, body').animate({ scrollTop: $('#dots7').offset().top }, 1000); return false; });
+  $('.dots-circle_8').click(function () { $('html, body').animate({ scrollTop: $('#map').offset().top }, 1000); return false; });
+
+  function redrawDotNav() {
+    var section1Top = 0;
+    var section2Top = $('#dots2').offset().top - (($('#dots3').offset().top - $('#dots2').offset().top) / 2);
+    var section3Top = $('#dots3').offset().top - (($('#dots4').offset().top - $('#dots3').offset().top) / 2);
+    var section4Top = $('#dots4').offset().top - (($('#dots5').offset().top - $('#dots4').offset().top) / 2);
+    var section5Top = $('#dots5').offset().top - (($('#dots6').offset().top - $('#dots5').offset().top) / 2);
+    var section6Top = $('#dots6').offset().top - (($('#dots7').offset().top - $('#dots6').offset().top) / 2);
+    var section7Top = $('#dots7').offset().top - (($('#map').offset().top - $('#dots7').offset().top) / 2);
+    var section8Top = $('#map').offset().top - (($(document).height() - $('#map').offset().top) / 2);
+    $('#dots a').removeClass('active-dot');
+    if ($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top) {
+      $('#dots a.dots-circle_1').addClass('active-dot');
+    } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top) {
+      $('#dots .dots-circle_2').addClass('active-dot');
+    } else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top) {
+      $('#dots .dots-circle_3').addClass('active-dot');
+    } else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top) {
+      $('#dots .dots-circle_4').addClass('active-dot');
+    } else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top) {
+      $('#dots .dots-circle_5').addClass('active-dot');
+    } else if ($(document).scrollTop() >= section6Top && $(document).scrollTop() < section7Top) {
+      $('#dots .dots-circle_6').addClass('active-dot');
+    } else if ($(document).scrollTop() >= section7Top && $(document).scrollTop() < section8Top) {
+      $('#dots .dots-circle_7').addClass('active-dot');
+    } else if ($(document).scrollTop() >= section8Top) {
+      $('#dots .dots-circle_8').addClass('active-dot');
+    }
+  }
+});
+
