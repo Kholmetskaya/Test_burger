@@ -708,15 +708,16 @@ body {
            position: relative;
            top: 15%;
            left: 10%;
+           z-index: 10;
            @media(max-width: 600px){
                 position: absolute;
                 top: 5%;
                 left: 5%;
-                z-index: 10;
+               
             } 
         }
         .menu-content{
-            width: 40%;
+            width: 40vw;
             @media(max-width: 960px){
                 width: 60%;                      
             }
@@ -776,7 +777,7 @@ body {
                         } 
                         @media(max-width: 480px){
                             margin: 110px auto;
-                            overflow: scroll;
+                            overflow-y: scroll;
                             height: 80%;
                         }                      
                     }
