@@ -244,7 +244,7 @@ textarea{
     border: none;
     background: none;
 }
-@media(max-width: 480px){   
+@media(max-width: 600px){   
     .slick-slider.wrapper.slick-initialized{
          width: 100%;
           margin: 0 ;
@@ -265,8 +265,10 @@ textarea{
     @media(max-width: 480px){
         width: 330px;                      
     }
+    @media(max-width: 320px){
+        width: 300px;                      
+    }
 }
-
 
 body {
     header {
@@ -334,13 +336,14 @@ body {
             display: flex;
             align-items: center;
             height: 80%;
-            @media(max-width: 600px){
+            width: 100%;
+            @media(max-width: 960px){
                 flex-direction: column;                    
             }
             .banner-img{
                 width: 100%;
                 vertical-align: top;
-                @media(max-width: 600px){
+                @media(max-width: 960px){
                     width: 70%;                      
                 }
             }
@@ -351,16 +354,19 @@ body {
                     padding-top: 30px;                
                 } 
                 .banner-content-head{
-                    @media(max-width: 600px){
+                    @media(max-width: 960px){
                         text-align: center;   
                         padding-top: 10px;                  
                     }  
                 }
                 .banner-content-info{
                     margin-top:37px;
-                    @media(max-width: 600px){
+                    @media(max-width: 960px){
                         text-align: center;                     
                     } 
+                    @media(max-width: 320px){
+                        font-size: 42px;                     
+                    }
                 }
             }
         }
@@ -449,18 +455,18 @@ body {
                     .slider-composition-menu{
                         display: flex;                
                         .slider-composition-burger{
-                            width: 90px;
-                            height: 90px; 
+                            width: 25%;
+                            height: 25%; 
                             @media(max-width: 480px){
-                                width: 50px;
-                                height: 50px;
+                                width: 20%;
+                                height: 20%;
                             }                   
                             border-radius: 5px;                   
                             background-color: #ea7a32;
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            flex-direction: column; 
+                            flex-direction: column;
                             .slider-composition-burger-info{
                                 .text(14px,normal,center,#ffffff,'Gagalin',normal,none)  ;
                                 padding-top: 10px;
@@ -512,7 +518,6 @@ body {
                         .active{
                             opacity: 0.91;
                             height: 402px;
-
                         }
                     }
                     .slider-composition-weight{
@@ -610,7 +615,7 @@ body {
         position: relative;
         .team-content{
             width: 44%;
-            @media(max-width: 600px){
+            @media(max-width: 768px){
                 width:100%; 
                 justify-content: center;
                 align-items: center;
@@ -718,14 +723,17 @@ body {
         }
         .menu-content{
             width: 40vw;
+            @media(max-width: 1200px){
+                width: 50vw;                      
+            }
             @media(max-width: 960px){
-                width: 60%;                      
+                width: 60vw;                      
             }
             @media(max-width: 768px){
-                width: 65%; 
+                width: 90vw; 
             } 
             @media(max-width: 600px){
-                width: 100%; 
+                width: 100vw; 
             } 
             height: 100%;
            .menu-content-list{
@@ -734,7 +742,6 @@ body {
                .menu-content-list-item{
                 display: flex;
                 .menu-content-list-item-header{
-                    height: 100%;
                     background: url(../img/foto1_sect5.png) no-repeat center top 100%; 
                     transform: rotate(180deg);
                     writing-mode: vertical-rl;
@@ -745,8 +752,9 @@ body {
                         .text(40px,normal,left,#ffffff,'Gagalin',normal,none)  ;
                         padding: 20px;
                         @media(max-width: 768px){
-                            padding: 5px;
-                        }
+                            padding: 10px;
+                            font-size: 32px;
+                        } 
                     }
                 }
                 &:nth-child(2){
@@ -763,7 +771,7 @@ body {
                 .menu-content-list-item-info{
                     background-color: #333333;
                     opacity: 0;
-                    transition: all 0.5s;
+                    transition: all 0.1s;
                     width: 0;
                     overflow: hidden;
                     cursor: pointer;
@@ -772,13 +780,16 @@ body {
                         line-height: 24px;
                         margin: 67px auto;
                         width: 90%;
+                        @media(max-width: 768px){
+                            line-height: 20px;
+                        } 
                         @media(max-width: 600px){
                             margin: 167px auto;
+
                         } 
                         @media(max-width: 480px){
                             margin: 110px auto;
-                            overflow-y: scroll;
-                            height: 80%;
+                            line-height: 18px;
                         }                      
                     }
                 }
@@ -791,7 +802,7 @@ body {
                    }
                    .menu-content-list-item-info{
                         opacity: 0.9;
-                        width: auto;
+                        width: 100%;
                    }
                }
            }
@@ -806,8 +817,8 @@ body {
             width: 100%;
             position: relative;
             .reviews-content-person{
-                width: 25%;  
-                @media(max-width: 600px){
+                width: 25%; 
+                @media(max-width: 960px){
                     width: 50%;                    
                 }            
                 .reviews-content-person-img{
@@ -904,13 +915,14 @@ body {
             display: flex;
             justify-content: space-around;
             margin-top: 63px;
+            width: 100%;
             @media(max-width: 600px){
                 flex-direction: column;                    
             }  
             .form-content-partleft{
                 width: 47%;
                 @media(max-width: 600px){
-                    width: 90%;
+                    width: 80%;
                     margin: 0 auto;                   
                 }  
                 .form-content-partleft-item{
@@ -942,7 +954,7 @@ body {
             .form-content-partright{
                 width: 47%;
                 @media(max-width: 600px){
-                    width: 90%; 
+                    width: 80%; 
                     margin: 0 auto;                
                 }  
                 .form-content-partright-item{
@@ -982,9 +994,21 @@ body {
     }
     #map{
         background: url(../img/bg_sect8.png) no-repeat center top 100%;
-        position: relative; 
+        position: relative;
         // width:100%;
         // height: 1000px;
+        @media(max-width: 600px){   
+            background-position-x: 50%;
+        }
+        @media(max-width: 600px){   
+            background-position-x: 55%;
+        }
+        @media(max-width: 480px){   
+            background-position-x: 52%;
+        }
+        @media(max-width: 340px){   
+            background-position-x: 53%;
+        }
     }
     footer{
         height: 63px;
@@ -994,7 +1018,8 @@ body {
             justify-content: space-between;
             align-items: center;
             height: 100%;
-            @media(max-width: 480px){   
+            width: 100%;
+            @media(max-width: 600px){   
                 flex-direction: column;
             }
             .footer-text, {
@@ -1008,7 +1033,7 @@ body {
                 color: #585858;
                 font-size: 23px;
                 margin-right: 12px;
-                @media(max-width: 480px){   
+                @media(max-width: 600px){   
                     font-size: 18px;
                     margin-top: 5px;
                 }
