@@ -1297,6 +1297,7 @@ body .menu .menu-content .menu-content-list .menu-content-list-item .menu-conten
   body .menu .menu-content .menu-content-list .menu-content-list-item .menu-content-list-item-info .menu-content-list-item-info-text {
     margin: 110px auto;
     line-height: 18px;
+    font-size: 12px;
   }
 }
 body .menu .menu-content .menu-content-list .selected .menu-content-list-item-header .menu-content-list-item-header-text {
